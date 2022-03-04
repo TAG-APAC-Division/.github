@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+    branches:
+      - [ $default-branch ]
+  pull_request:
+    branches:
+      - [ $default-branch ]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-test:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-build.yml@v0.1.45
+    with:
+      run_tests: true
+      test_project: 'TestProject1/*.csproj'
+      sonar_exclude: 'TestProject1/**/*.*'
+    secrets:
+      gh_token: ${{ secrets.GITHUB_TOKEN }}
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
+      sonar_host_url: ${{ secrets.SONAR_HOST_URL }}
