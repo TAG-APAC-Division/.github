@@ -1,4 +1,4 @@
-name: build
+name: ci
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  build-test:
+  build-test-analyze:
     uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-build.yml@v0.1.45
     with:
       project: Test.NetFramework.sln
