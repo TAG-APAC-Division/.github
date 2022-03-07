@@ -3,18 +3,16 @@ name: ci
 on:
   push:
     branches:
-      - [ $default-branch ]
+      [ $default-branch ]
   pull_request:
     branches:
-      - [ $default-branch ]
+      [ $default-branch ]
     types: [opened, synchronize, reopened]
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-build.yml@v0.1.45
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.1.48
     with:
-      run_tests: true
-      test_project: 'TestProject1/*.csproj'
       sonar_exclude: 'TestProject1/**/*.*'
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
