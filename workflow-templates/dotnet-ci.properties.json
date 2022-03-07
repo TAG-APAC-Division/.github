@@ -1,6 +1,6 @@
 {
-    "name": "Access APAC .NET Build Workflow",
-    "description": "Access APAC .NET Build starter workflow.",
+    "name": "Access APAC .NET CI Workflow",
+    "description": "Access APAC .NET CI starter workflow.",
     "categories": [
         "Microsoft Visual Studio Solution",
         "C#",
