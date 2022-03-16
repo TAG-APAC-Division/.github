@@ -11,10 +11,10 @@ on:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-ci.yml@v0.1.48
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-ci.yml@v0.1.50
     with:
-      project: Test.NetFramework.sln
-      sonar_exclude: 'Test.NetFramework.UnitTest/**/*.*'
+      project: MyApp.NetFramework.sln
+      sonar_exclude: 'test/**/*.*'
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
       sonar_token: ${{ secrets.SONAR_TOKEN }}
