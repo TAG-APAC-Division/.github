@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.1.50
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.1.77
     with:
       sonar_exclude: 'test/**/*.*'
     secrets:
