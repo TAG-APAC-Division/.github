@@ -9,9 +9,13 @@ on:
       [ $default-branch ]
     types: [opened, synchronize, reopened]
 
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.1.77
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.2.3
     with:
       sonar_exclude: 'test/**/*.*'
     secrets:
