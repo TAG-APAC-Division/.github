@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-ci.yml@v0.2.3
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-ci.yml@v0.2.11
     with:
       projects: MyApp.NetFramework.sln
       sonar_exclude: 'test/**/*.*'
@@ -23,3 +23,4 @@ jobs:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
       sonar_token: ${{ secrets.SONAR_TOKEN }}
       sonar_host_url: ${{ secrets.SONAR_HOST_URL }}
+      gh_read_packages_token: ${{ secrets.GH_READ_PACKAGES_TOKEN }}
