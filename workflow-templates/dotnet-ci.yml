@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.2.13
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.2.16
     with:
       run_publish: false
     secrets:
