@@ -1,0 +1,9 @@
+{
+    "name": "Access APAC .NET WhiteSource Scan Workflow",
+    "description": "Access APAC .NET WhiteSource Scan starter workflow.",
+    "categories": [
+        "Microsoft Visual Studio Solution",
+        "C#",
+        "Visual Basic .NET"
+    ]
+}
