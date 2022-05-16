@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-ci.yml@v0.3.0
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-framework-ci.yml@v0.4.6
     with:
       projects: MyApp.NetFramework.sln
       use_apac_github_nuget: true
