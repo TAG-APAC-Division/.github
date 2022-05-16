@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   init-validate-plan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-ci.yml@v0.4.4
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-ci.yml@v0.4.6
     with:
       resource_group_name: RESOURCE_GROUP_NAME
       storage_account_name: STORAGE_ACCOUNT_NAME
@@ -26,7 +26,7 @@ jobs:
       gh_tf_modules_token: ${{ secrets.GH_TF_MODULES_TOKEN }}
 
   init-apply:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cd.yml@v0.4.4
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cd.yml@v0.4.6
     needs: init-validate-plan
     if: github.ref == 'refs/heads/main' && github.event_name == 'push' && needs.init-validate-plan.outputs.plan_exitcode == 2
     with:
