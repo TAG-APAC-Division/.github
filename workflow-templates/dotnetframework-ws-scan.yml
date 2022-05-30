@@ -10,12 +10,11 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnetframework-ws-scan.yml@v0.4.6
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnetframework-ws-scan.yml@v0.6.2
     with:
       projects: MyApp.NetFramework.sln
-      use_apac_github_nuget: true
       whitesource_product_name: my-product
+      runs_on_os: windows-latest
     secrets: 
       whitesource_api_key: ${{ secrets.WHITESOURCE_API_KEY }}
-      whitesource_agent_url: ${{ secrets.WHITESOURCE_AGENT_URL }}     
-      gh_read_packages_token: ${{ secrets.GH_READ_PACKAGES_TOKEN }}
+      whitesource_agent_url: ${{ secrets.WHITESOURCE_AGENT_URL }}
