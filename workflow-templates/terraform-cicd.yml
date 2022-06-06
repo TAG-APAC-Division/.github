@@ -1,0 +1,32 @@
+name: cicd
+
+on:
+  push:
+    branches:
+      [ $default-branch ]
+  pull_request:
+    branches:
+      [ $default-branch ]
+    types: [opened, synchronize, reopened]
+
+concurrency: 
+  group: ${{ github.workflow }}
+
+jobs:
+  init-plan-apply:
+    name: Init Plan Apply
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.6.21
+    with:
+      lob: acc # Replace with your line of business
+      env: dev # Replace with your env
+      app: app1 # Replace with name of your app
+      environment: dev # Replace with your GitHub deployment environment
+    secrets:
+      gh_token: ${{ secrets.GITHUB_TOKEN }}  
+      gh_tf_modules_token: ${{ secrets.GH_TF_MODULES_TOKEN }}
+      arm_tenant_id: ${{ secrets.ARM_TENANT_ID }}      
+      arm_client_id: ${{ secrets.ARM_CLIENT_ID }}
+      arm_client_secret: ${{ secrets.ARM_CLIENT_SECRET }}
+      arm_sas_token: ${{ secrets.DEV_ARM_SAS_TOKEN }}
+      arm_subscription_id: ${{ secrets.DEV_ARM_SUBSCRIPTION_ID }}
+      
