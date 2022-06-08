@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ws-scan.yml@v0.6.21
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ws-scan.yml@v0.6.25
     with:
       whitesource_product_name: my-product
     secrets: 
