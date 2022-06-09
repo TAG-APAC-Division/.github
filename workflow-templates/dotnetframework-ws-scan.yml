@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnetframework-ws-scan.yml@v0.6.25
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnetframework-ws-scan.yml@v0.6.32
     with:
       projects: MyApp.NetFramework.sln
       whitesource_product_name: my-product

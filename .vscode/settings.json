@@ -3,6 +3,7 @@
         "APAC",
         "cicd",
         "exitcode",
+        "tfvars",
         "whitesource"
     ]
 }
