@@ -1,0 +1,9 @@
+{
+    "name": "Access APAC JIRA Enrichment Workflow",
+    "description": "Access APAC JIRA Enrichment workflow.",
+    "categories": [
+        "continuous-integration",
+        "automation",
+        "utilities"
+    ]
+}
