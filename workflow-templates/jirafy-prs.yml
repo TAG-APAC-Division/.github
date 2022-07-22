@@ -1,0 +1,16 @@
+name: jirafy-prs
+
+on:
+  pull_request:
+    types: [opened]
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-pr:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/jirafy-prs.yml@v0.6.34
+    secrets:
+      gh_token: ${{ secrets.GITHUB_TOKEN }}
+      jira_url: ${{ secrets.JIRA_URL }}
