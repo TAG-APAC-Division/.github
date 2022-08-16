@@ -1,6 +1,7 @@
 name: whitesource-scan
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 1 * * 0"
 
@@ -9,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-test-analyze:
+  build-scan:
     uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ws-scan.yml@v0.6.32
     with:
       whitesource_product_name: my-product
