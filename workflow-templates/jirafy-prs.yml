@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   update-pr:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/jirafy-prs.yml@v0.6.34
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/jirafy-prs.yml@v0.6.37
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
       jira_url: ${{ secrets.JIRA_URL }}
