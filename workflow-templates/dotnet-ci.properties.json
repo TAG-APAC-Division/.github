@@ -1,6 +1,6 @@
 {
     "name": "Access APAC .NET CI Workflow",
-    "description": "Access APAC .NET CI starter workflow.",
+    "description": "Access APAC .NET CI starter workflow for building .NET applications. It can optionally publish the build artifacts or pack them as NuGet Packages and push them to GitHub Packages.",
     "categories": [
         "Microsoft Visual Studio Solution",
         "C#",
