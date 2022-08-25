@@ -1,4 +1,4 @@
-name: ci
+name: sq-scan
 
 on:
   workflow_dispatch:
@@ -15,13 +15,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnetframework-ci.yml@v0.6.32
-    with:
-      projects: MyApp.NetFramework.sln
-      runs_on_os: windows-latest
+  build-test-scan:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-sq-scan.yml@v0.8.1
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
       sonar_token: ${{ secrets.SONAR_TOKEN }}
       sonar_host_url: ${{ secrets.SONAR_HOST_URL }}
-      

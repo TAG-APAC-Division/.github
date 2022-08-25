@@ -3,12 +3,6 @@ name: ci
 on:
   workflow_dispatch:
   push:
-    branches:
-      [ $default-branch ]
-  pull_request:
-    branches:
-      [ $default-branch ]
-    types: [opened, synchronize, reopened]
 
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,8 +10,6 @@ concurrency:
 
 jobs:
   build-test-analyze:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.6.32
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.8.1
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
-      sonar_token: ${{ secrets.SONAR_TOKEN }}
-      sonar_host_url: ${{ secrets.SONAR_HOST_URL }}
