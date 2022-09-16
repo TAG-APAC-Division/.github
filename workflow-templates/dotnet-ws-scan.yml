@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-scan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ws-scan.yml@v0.8.3
+  ws-scan:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ws-scan.yml@v0.9.0
     with:
       whitesource_product_name: my-product
     secrets: 
