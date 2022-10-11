@@ -13,8 +13,7 @@ concurrency:
   group: ${{ github.workflow }}
 
 jobs:
-  init-plan-apply:
-    name: Init Plan Apply
+  cicd:    
     uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.15.1
     with:
       lob: acc # Replace with your line of business
