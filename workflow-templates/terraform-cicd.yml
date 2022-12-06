@@ -14,13 +14,13 @@ concurrency:
 
 jobs:
   cicd:    
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.15.1
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.17.4
     with:
       lob: acc # Replace with your line of business
       env: dev # Replace with your env
       app: app1 # Replace with name of your app
       environment: dev # Replace with your GitHub deployment environment
-      var_file: env/dev.tfvars # Replace with your tfvars path from root
+      var_file_list: "-var-file='../env/dev.tfvars'" # Replace with the list of your tfvars files path
       generate_plan: ${{ github.event_name == 'push' }}
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}  
