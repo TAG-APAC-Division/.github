@@ -1,0 +1,10 @@
+{
+    "name": "Access APAC NPM CI Workflow",
+    "description": "Access APAC .NET CI starter workflow for building NPM applications",
+    "categories": [
+        "NPM",
+        "Frontend",
+        "Angular",
+        "React"
+    ]
+}

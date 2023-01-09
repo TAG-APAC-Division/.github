@@ -1,0 +1,13 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/npm-ci.yml@v0.18.0
