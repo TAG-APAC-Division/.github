@@ -1,0 +1,26 @@
+name: sq-scan
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      [ $default-branch ]
+  pull_request:
+    branches:
+      [ $default-branch ]
+    types: [opened, synchronize, reopened]
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sq-scan:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/npm-sq-scan.yml@v0.18.0
+    secrets:
+      gh_token: ${{ secrets.GITHUB_TOKEN }}
+      sonar_token: ${{ secrets.SONAR_TOKEN }}
+      sonar_host_url: ${{ secrets.SONAR_HOST_URL }}
+      tag_npm_token_b64: ${{ secrets.TAG_NPM_TOKEN_B64 }}
+      tag_npm_account: ${{ secrets.TAG_NPM_ACCOUNT }}
+      
