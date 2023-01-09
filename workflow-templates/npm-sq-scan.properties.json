@@ -3,6 +3,7 @@
     "description": "Access APAC NPM CI starter workflow for building frontend applications.",
     "categories": [
         "NPM",
+        "Frontend",
         "Angular",
         "React"
     ]
