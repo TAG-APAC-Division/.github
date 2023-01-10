@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   sq-scan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-sq-scan.yml@v0.17.6
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-sq-scan.yml@v0.18.5
     secrets:
       gh_token: ${{ secrets.GITHUB_TOKEN }}
       sonar_token: ${{ secrets.SONAR_TOKEN }}
