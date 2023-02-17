@@ -2,19 +2,6 @@ name: ws-scan
 
 on:
   workflow_dispatch:
-    inputs:
-      release_build:
-        required: false
-        type: boolean
-        default: true
-      build_aab:
-        required: false
-        type: boolean
-        default: true
-      multi_module:
-        required: false
-        type: boolean
-        default: true
   schedule:
     - cron: "0 1 * * 0"
 
@@ -27,9 +14,6 @@ jobs:
     uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/android-ws-scan.yml@v0.19.1
     with:
       whitesource_product_name: my-product
-      release_build: ${{ inputs.release_build }}
-      build_aab: ${{ inputs.build_aab }}
-      multi_module: ${{ inputs.multi_module }}
     secrets: 
       whitesource_api_key: ${{ secrets.WHITESOURCE_API_KEY }}
       whitesource_agent_url: ${{ secrets.WHITESOURCE_AGENT_URL }}
