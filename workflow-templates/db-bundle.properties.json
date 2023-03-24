@@ -1,0 +1,10 @@
+{
+    "name": "Access APAC .NET EF Core Migrations Bundle Workflow",
+    "description": "Access APAC .NET EF Core starter workflow for building EF Core migrations bundle. It can optionally execute migrations against a specified connection and publish the bundle for validation.",
+    "categories": [
+        "Microsoft Visual Studio Solution",
+        "C#",
+        "EntityFramework Core",
+        "continuous-deployment"
+    ]
+}
