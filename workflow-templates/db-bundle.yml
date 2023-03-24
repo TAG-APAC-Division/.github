@@ -11,7 +11,9 @@ concurrency:
 jobs:
   bundle:
     uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/db-bundle.yml@v0.21.2
-    secrets: inherit
     with:
       migrations_project_path: path/to/migrations.csproj
       startup_project_path: path/to/startup.csproj
+    secrets:
+      GH_READ_PACKAGES_TOKEN: ${{ secrets.GH_READ_PACKAGES_TOKEN }}
+      DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
