@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   cicd:    
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.18.5
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.26.3
     with:
       lob: acc # Replace with your line of business
       env: dev # Replace with your env
@@ -22,13 +22,5 @@ jobs:
       environment: dev # Replace with your GitHub deployment environment
       var_file_list: "-var-file='../env/dev.tfvars'" # Replace with the list of your tfvars files path
       generate_plan: ${{ github.event_name == 'push' }}
-    secrets:
-      gh_token: ${{ secrets.GITHUB_TOKEN }}  
-      gh_tf_modules_token: ${{ secrets.GH_TF_MODULES_TOKEN }}
-      gpg_passphrase: ${{ secrets.TF_GPG_PASSPHRASE }}
-      arm_tenant_id: ${{ secrets.ARM_TENANT_ID }}      
-      arm_client_id: ${{ secrets.ARM_CLIENT_ID }}
-      arm_client_secret: ${{ secrets.ARM_CLIENT_SECRET }}
-      arm_sas_token: ${{ secrets.DEV_ARM_SAS_TOKEN }}
-      arm_subscription_id: ${{ secrets.DEV_ARM_SUBSCRIPTION_ID }}
+    secrets: inherit
       

@@ -10,6 +10,5 @@ concurrency:
 
 jobs:
   ci:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.18.5
-    secrets:
-      gh_token: ${{ secrets.GITHUB_TOKEN }}
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.26.3
+    secrets: inherit
