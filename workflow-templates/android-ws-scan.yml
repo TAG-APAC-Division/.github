@@ -2,8 +2,13 @@ name: ws-scan
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 1 * * 0"
+  push:
+    branches:
+      [ $default-branch ]
+  pull_request:
+    branches:
+      [ $default-branch ]
+    types: [opened, synchronize, reopened]
 
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -11,7 +16,7 @@ concurrency:
 
 jobs:
   ws-scan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/android-ws-scan.yml@v0.26.3
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/android-ws-scan.yml@v0.28.9
     with:
       whitesource_product_name: my-product
     secrets: inherit

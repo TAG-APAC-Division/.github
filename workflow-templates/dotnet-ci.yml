@@ -10,5 +10,5 @@ concurrency:
 
 jobs:
   ci:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.26.3
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@v0.28.9
     secrets: inherit
