@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   ws-scan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/android-ws-scan.yml@v0.28.9
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/android-ws-scan.yml@v0.30.1
     with:
       whitesource_product_name: my-product
     secrets: inherit
