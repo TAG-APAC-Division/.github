@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   bundle:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/db-bundle.yml@v0.28.9
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/db-bundle.yml@v0.30.3
     with:
       migrations_project_path: path/to/migrations.csproj
       startup_project_path: path/to/startup.csproj
