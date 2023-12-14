@@ -1,6 +1,6 @@
 {
-    "name": "Access APAC Android Mend (WhiteSource) Scan Workflow",
-    "description": "Access APAC Android Mend (WhiteSource) Scan starter workflow for scanning native Android applications with Mend (WhiteSource) Unified Agent.",
+    "name": "[Obsolete] Access APAC Android Mend (WhiteSource) Scan Workflow",
+    "description": "[Obsolete] Access APAC Android Mend (WhiteSource) Scan starter workflow for scanning native Android applications with Mend (WhiteSource) Unified Agent.",
     "categories": [
         "Android Studio",
         "Kotlin",
