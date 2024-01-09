@@ -16,5 +16,5 @@ concurrency:
 
 jobs:
   sq-scan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/npm-sq-scan.yml@v0.32.7
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/npm-sq-scan.yml@v0.32.17
     secrets: inherit

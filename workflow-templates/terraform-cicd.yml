@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   cicd:    
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.32.7
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/terraform-cicd.yml@v0.32.17
     with:
       lob: acc # Replace with your line of business
       env: dev # Replace with your env
