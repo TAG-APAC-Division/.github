@@ -1,9 +1,0 @@
-{
-    "name": "[Obsolete] Access APAC .NET Mend (WhiteSource) Scan Workflow",
-    "description": "[Obsolete] Access APAC .NET Mend (WhiteSource) Scan starter workflow for scanning .NET applications with Mend (WhiteSource) Unified Agent.",
-    "categories": [
-        "Microsoft Visual Studio Solution",
-        "C#",
-        "Visual Basic .NET"
-    ]
-}
