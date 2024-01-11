@@ -5,8 +5,10 @@
         "code-quality",
         "testing",
         "code-review",
-        "NPM",
-        "Frontend",
+        "npm",
+        "TypeScript",
+        "JavaScript",
+        "Yarn",
         "Angular",
         "React"
     ]
