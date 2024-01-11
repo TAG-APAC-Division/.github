@@ -2,6 +2,9 @@
     "name": "Access APAC .NET SonarQube Scan Workflow",
     "description": "Access APAC .NET SonarQube Scan starter workflow for analyzing .NET applications with SonarQube. It can optionally test and submit the test coverage to SonarQube.",
     "categories": [
+        "code-quality",
+        "testing",
+        "code-review",
         "Microsoft Visual Studio Solution",
         "C#",
         "Visual Basic .NET"
