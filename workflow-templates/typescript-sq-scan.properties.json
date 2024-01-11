@@ -1,0 +1,12 @@
+{
+    "name": "Access APAC TypeScript SonarQube Scan Workflow",
+    "description": "Access APAC .NET SonarQube Scan starter workflow for analyzing TypeScript applications with SonarQube. It can test and submit the test coverage to SonarQube.",
+    "categories": [
+        "code-quality",
+        "testing",
+        "code-review",
+        "Microsoft Visual Studio Solution",
+        "TypeScript",
+        "JavaScript"
+    ]
+}

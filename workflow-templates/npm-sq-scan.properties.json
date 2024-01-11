@@ -2,6 +2,9 @@
     "name": "Access APAC NPM SonarQube Workflow",
     "description": "Access APAC NPM CI starter workflow for building frontend applications.",
     "categories": [
+        "code-quality",
+        "testing",
+        "code-review",
         "NPM",
         "Frontend",
         "Angular",
