@@ -1,0 +1,20 @@
+name: sq-scan
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      [ $default-branch ]
+  pull_request:
+    branches:
+      [ $default-branch ]
+    types: [opened, synchronize, reopened]
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sq-scan:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/php-sq-scan.yml@main
+    secrets: inherit

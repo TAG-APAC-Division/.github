@@ -1,0 +1,11 @@
+{
+    "name": "Access APAC PHP SonarQube Scan Workflow",
+    "description": "Access APAC PHP SonarQube Scan starter workflow for analyzing PHP applications with SonarQube. It can test and submit the test coverage to SonarQube.",
+    "categories": [
+        "code-quality",
+        "testing",
+        "code-review",
+        "HTML+PHP",
+        "PHP"
+    ]
+}
