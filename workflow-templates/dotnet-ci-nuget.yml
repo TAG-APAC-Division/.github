@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@main
+    with:
+      set_version: true
+      run_pack: true
+    secrets: inherit

@@ -6,5 +6,6 @@
         "Qube",
         "tfvars",
         "whitesource"
-    ]
+    ],
+    "WhiteSource Advise.Diff.BaseBranch": "main"
 }
