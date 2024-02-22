@@ -1,4 +1,4 @@
-name: ci
+name: ci-nuget-publish
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ci:
+  ci-nuget-publish:
     uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/dotnet-ci.yml@main
     with:
       set_version: true
