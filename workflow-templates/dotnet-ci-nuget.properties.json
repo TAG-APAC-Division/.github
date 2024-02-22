@@ -1,0 +1,9 @@
+{
+    "name": "Access APAC .NET NuGet Publish CI Workflow",
+    "description": "Access APAC .NET Publish CI starter workflow for building .NET applications and packing them as NuGet Packages and pushing them to APAC GitHub Packages.",
+    "categories": [
+        "Microsoft Visual Studio Solution",
+        "C#",
+        "Visual Basic .NET"
+    ]
+}
