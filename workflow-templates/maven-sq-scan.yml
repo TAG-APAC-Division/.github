@@ -16,5 +16,5 @@ concurrency:
 
 jobs:
   sq-scan:
-    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/mvn-sq-scan.yml@main
+    uses: TAG-APAC-Division/platform-reusable-workflows/.github/workflows/maven-sq-scan.yml@main
     secrets: inherit

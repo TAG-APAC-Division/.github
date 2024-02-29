@@ -1,0 +1,11 @@
+{
+    "name": "Access APAC Maven SonarQube Scan Workflow",
+    "description": "Access APAC Maven SonarQube Scan starter workflow for analyzing Java applications with SonarQube. It can test and submit the test coverage to SonarQube.",
+    "categories": [
+        "code-quality",
+        "testing",
+        "code-review",
+        "Java",
+        "Maven"
+    ]
+}
